@@ -1,0 +1,40 @@
+Tail recursion solutions are good because they are optimized by the modern compilers
+
+void fun(int n){
+  start :
+if(n==0){return;}
+
+Syso(n);
+
+fun(n-1);   ---> in tail Recursion this statement will change to n=n-1 and got0 start;   <----These are called tail call elemination
+
+}
+
+converting a non tail recursive to tail recursive solution;
+
+Non Tail Recursive :-
+void fun(int n){
+if (n==0){
+return;
+}
+  
+fun(n-1);
+
+Syso(n);
+
+}
+
+//Tail Recursion
+//K is passed as 1
+void fun(int n,int k){
+
+print(k)
+fun(n-1,k+1);}
+
+factorial : -
+//k=1
+int fact(int n,int k){
+if(n==0 || n==1){return 1;}
+
+return fact(n-1,k*n);
+}
